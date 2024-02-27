@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(MyApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      theme: ThemeData(brightness: Brightness.dark),
+      home: const Scaffold(
         body: Center(
-          child: Column(
-            children: [
-              Image.asset('assets/images/icon.png'),
-              const Text(
-                "Hello World!",
-                style: TextStyle(fontFamily: 'SixtyFour'),
-              ),
-            ],
+          child: Text(
+            "Hello world",
           ),
         ),
       ),
